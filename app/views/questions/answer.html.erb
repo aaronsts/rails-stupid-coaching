@@ -1,7 +1,25 @@
 <% if @answer == 'I am going to work' %>
-<p>Great!</p>
+<div>
+<p><%= @answer %></p><br>
+<h3>  You</h3><br>
+<p>Great!</p><br>
+<h3>Coach</h3><br>
+<%= link_to "Ask another question", ask_path %>
+</div>
 <% elsif @answer.end_with?('?') %>
-<p>Silly question, get dressed and go to work!</p>
+<div>
+<p><%= @answer %></p><br>
+<h3>  You</h3><br>
+<p>Silly question, get dressed and go to work!</p><br>
+<h3>Coach</h3><br>
+<%= link_to "Ask another question", ask_path %>
+</div>
 <% else %>
-<p>I don't care, get dressed and go to work!</p>
+<div>
+<p><%= @answer %></p><br>
+<h3>  You</h3><br>
+<p>I don't care, get dressed and go to work!</p><br>
+<h3>Coach</h3><br>
+<%= link_to "Ask another question", ask_path %>
+</div>
 <% end %>
